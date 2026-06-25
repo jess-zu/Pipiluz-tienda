@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pipiluz – Ropa Infantil Unisex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body {
+      padding-right: 0 !important;
+    }
+  </style>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- ===== SIDEBAR DERECHA ===== -->
+  <aside class="sidebar">
+    <div>
+      <nav class="sidebar__nav">
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <a href="carrito.html" class="sidebar__cart" style="margin-top:2.5rem; display:flex;">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        Carrito
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+
+    <div class="sidebar__bottom">
+      <div class="sidebar__socials">
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+      <p class="sidebar__copy">© 2026 Pipiluz.<br>Todos los derechos reservados.</p>
+    </div>
+  </aside> <!-- ← cerrá el aside PRIMERO -->
+
+  <!-- Botón hamburguesa (solo mobile) -->
+  <button class="navbar-toggler hamburger" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuMobile"
+    aria-controls="menuMobile">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Menú mobile -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="menuMobile">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li><a href="index.html" class="nav__link">Inicio</a></li>
+        <li><a href="tienda.html" class="nav__link">Tienda</a></li>
+        <li><a href="nosotros.html" class="nav__link">Nosotros</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main">
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <div class="main">
+
+      <!-- ===== HERO ===== -->
+      <section class="hero">
+        <div class="hero__bg">
+
+          <div class="hero__bg"></div>
+        </div>
+
+        <div class="hero__shapes">
+          <div class="shape shape--1"></div>
+          <div class="shape shape--2"></div>
+          <div class="shape shape--3"></div>
+        </div>
+
+        <!-- Logo top left -->
+        <a href="index.html" class="hero__logo">
+          <span class="logo__pipi">Pipi</span><em class="logo__luz">luz</em>
+        </a>
+
+        <!-- Centro -->
+        <div class="hero__center">
+          <p class="hero__pretitle">Nueva Colección 2026</p>
+          <h1 class="hero__title">Pipi<em>luz</em></h1>
+          <p class="hero__slogan">Ropa que los niños aman llevar puesto</p>
+          <a href="tienda.html" class="hero__cta">
+            Ver colección
+            <svg viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- ===== CATEGORÍAS ===== -->
+      <section class="categorias">
+        <div class="categorias__header">
+          <div>
+            <p class="section__eyebrow">Explorá</p>
+            <h2 class="section__title">Nuestra<br><em>colección</em></h2>
+          </div>
+        </div>
+        <div class="categorias__grid">
+
+          <a href="tienda.html#buzos" class="cat cat--buzos">
+            <div class="cat__img" style="background-image: url('img/allgooddays-skate.webp')"></div>
+            <div class="cat__placeholder"></div>
+            <div class="cat__overlay"></div>
+            <div class="cat__info">
+              <p class="cat__tag">Categoría</p>
+              <p class="cat__nombre">Buzos</p>
+              <span class="cat__btn">Ver todo →</span>
+            </div>
+          </a>
+
+          <a href="tienda.html#conjuntos" class="cat cat--conjuntos">
+            <div class="cat__img" style="background-image: url('img/conjunto-puma-verde-600x900.webp')"></div>
+            <div class="cat__placeholder"></div>
+            <div class="cat__overlay"></div>
+            <div class="cat__info">
+              <p class="cat__tag">Categoría</p>
+              <p class="cat__nombre">Conjuntos</p>
+              <span class="cat__btn">Ver todo →</span>
+            </div>
+          </a>
+
+          <a href="tienda.html#remeras" class="cat cat--remeras">
+            <div class="cat__img" style="background-image: url('img/reme-peace-bb.webp')"></div>
+            <div class="cat__placeholder"></div>
+            <div class="cat__overlay"></div>
+            <div class="cat__info">
+              <p class="cat__tag">Categoría</p>
+              <p class="cat__nombre">Remeras</p>
+              <span class="cat__btn">Ver todo →</span>
+            </div>
+          </a>
+
+          <a href="tienda.html#bodys" class="cat cat--bodys">
+            <div class="cat__img" style="background-image: url('img/body-vansa-ros.webp')"></div>
+            <div class="cat__placeholder"></div>
+            <div class="cat__overlay"></div>
+            <div class="cat__info">
+              <p class="cat__tag">Categoría</p>
+              <p class="cat__nombre">Bodys</p>
+              <span class="cat__btn">Ver todo →</span>
+            </div>
+          </a>
+
+
+        </div>
+      </section>
+
+      <!-- ===== GALERÍA COMBOS PRMOCIONALES ===== -->
+
+      <section class="galeria">
+        <div class="galeria__header">
+          <p class="section__eyebrow">Ofertas</p>
+          <h2 class="section__title">Combos <em>promocionales</em></h2>
+        </div>
+        <div class="galeria__grid">
+
+          <div class="galeria__item">
+            <div class="galeria__img-wrap">
+              <span class="galeria__badge">🔥 Combo</span>
+              <img src="img/bodys-combos.webp" alt="Remera Peace" />
+            </div>
+            <div class="galeria__info">
+              <p class="galeria__cat">Bodys x3</p>
+              <h3 class="galeria__nombre">Combo Bodys</h3>
+              <p class="galeria__desc">100% algodón. Talle 1 al 5</p>
+              <div class="galeria__footer">
+                <div>
+                  <span class="galeria__precio--original">$35.990</span>
+                  <span class="galeria__precio">$32.390</span>
+                </div>
+                <button class="btn-carrito">+ Carrito</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="galeria__item">
+            <div class="galeria__img-wrap">
+              <span class="galeria__badge">🔥 Combo</span>
+              <img src="img/conjunto-disney.webp" alt="conjunto-disney" />
+            </div>
+            <div class="galeria__info">
+              <p class="galeria__cat">Buzo + Pantalón</p>
+              <h3 class="galeria__nombre">Combo Estampa</h3>
+              <p class="galeria__desc">100% algodón. Talle 1 al 4</p>
+              <div class="galeria__footer">
+                <div>
+                  <span class="galeria__precio--original">$31.990</span>
+                  <span class="galeria__precio">$28.790</span>
+                </div>
+                <button class="btn-carrito">+ Carrito</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="galeria__item">
+          <div class="galeria__img-wrap">
+            <span class="galeria__badge">🔥 Combo</span>
+            <img src="img/buzo+remera.webp" alt="buzo+remera" />
+          </div>
+          <div class="galeria__info">
+            <p class="galeria__cat">Buzo + Remera</p>
+            <h3 class="galeria__nombre">Combo Mangas</h3>
+            <p class="galeria__desc">100% algodón. Talle 1 al 4</p>
+            <div class="galeria__footer">
+              <div>
+                <span class="galeria__precio--original">$29.990</span>
+                <span class="galeria__precio">$26.990</span>
+              </div>
+              <button class="btn-carrito">+ Carrito</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="galeria__item">
+          <div class="galeria__img-wrap">
+            <span class="galeria__badge">🔥 Combo</span>
+            <img src="img/reme-marcas.webp" alt="reme-marcas" />
+          </div>
+          <div class="galeria__info">
+            <p class="galeria__cat">Buzo + Remera + Pantalon</p>
+            <h3 class="galeria__nombre">Combo Completo</h3>
+            <p class="galeria__desc">100% algodón. Talle 1 al 4</p>
+            <div class="galeria__footer">
+              <div>
+                <span class="galeria__precio--original">$43.950</span>
+                <span class="galeria__precio">$39.550</span>
+              </div>
+              <button class="btn-carrito">+ Carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Repetí este bloque por cada producto -->
+
+    </div>
+    </section>
+
+    <!-- ===== BANNER PROMO ===== -->
+    <div class="promo">
+      <div>
+        <p class="promo__eyebrow">Oferta especial</p>
+        <h2 class="promo__title">Envío gratis en compras mayores a $30.000</h2>
+        <p class="promo__desc">Comprá desde casa y recibí en todo el país.</p>
+        <a href="tienda.html" class="promo__btn">
+          Aprovechar oferta →
+        </a>
+      </div>
+      <div class="promo__deco">🌈</div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo-text">
+            <span class="logo__pipi">Pipi</span><em class="logo__luz">luz</em>
+          </a>
+          <p>Ropa infantil unisex con amor desde Buenos Aires.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="tienda.html">Todos los productos</a></li>
+            <li><a href="tienda.html?cat=novedades">Novedades</a></li>
+            <li><a href="tienda.html?cat=ofertas">Ofertas</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Política de cambios</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <p>© 2026 Pipiluz. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+  </div><!-- /main -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/5491165948438?text=Hola!%20Visit%C3%A9%20la%20tienda%20y%20me%20interesa%20realizar%20un%20pedido%20%F0%9F%9B%8D%EF%B8%8F"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <span class="whatsapp-tooltip">¿Consultas? Escribinos</span>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.535 5.943L.057 23.526a.75.75 0 0 0 .917.917l5.584-1.478A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.943-1.353l-.355-.211-3.664.968.983-3.595-.232-.371A9.699 9.699 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+  </svg>
+</a>
+</body>
+
+
+
+</html>

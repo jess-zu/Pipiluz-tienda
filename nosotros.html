@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros – Pipiluz</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .about-hero { background:linear-gradient(135deg,#C8E8FF,#CCFADA); padding:4rem 0; text-align:center; }
+    .about-hero h1 { font-family:'Baloo 2',cursive; font-size:2.8rem; font-weight:800; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; margin-bottom:4rem; }
+    .about-visual { font-size:8rem; text-align:center; }
+    .about-text h2 { font-family:'Baloo 2',cursive; font-size:2rem; font-weight:800; margin-bottom:1rem; }
+    .about-text p  { color:var(--texto-soft); line-height:1.8; margin-bottom:1rem; }
+    .valores-grid  { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
+    .valor-card    { background:var(--blanco); border-radius:var(--radio); padding:1.8rem 1.5rem; text-align:center; box-shadow:var(--sombra); }
+    .valor-card .icon { font-size:2.5rem; margin-bottom:.7rem; }
+    .valor-card h3 { font-family:'Baloo 2',cursive; font-weight:800; margin-bottom:.4rem; }
+    .valor-card p  { font-size:.9rem; color:var(--texto-soft); }
+    @media(max-width:700px){ .about-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner container">
+      <a href="index.html" class="logo"><span class="logo__icon">🌟</span><span class="logo__text">pipiluz</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Inicio</a></li>
+          <li><a href="tienda.html" class="nav__link">Tienda</a></li>
+          <li><a href="nosotros.html" class="nav__link active">Nosotros</a></li>
+          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="carrito.html" class="btn-icon">🛒 <span class="cart-badge" id="cartBadge">0</span></a>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="about-hero">
+    <div class="container">
+      <h1>🌟 Nuestra historia</h1>
+      <p style="margin-top:.6rem;color:var(--texto-soft);font-size:1.05rem;">Ropa hecha con amor para los más chiquitos</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">🧸👶🎨</div>
+        <div class="about-text">
+          <h2>¿Quiénes somos?</h2>
+          <p>Pipiluz nació en 2020 en Buenos Aires, con una idea simple: hacer ropa infantil que sea tan cómoda como divertida. Creemos que los chicos merecen prendas que los acompañen en cada aventura, sin límites de género ni estilo.</p>
+          <p>Todas nuestras prendas están diseñadas pensando en el movimiento, la libertad y la alegría. Trabajamos con talleres locales y materiales de primera calidad.</p>
+          <a href="tienda.html" class="btn btn--primary">Conocé la colección</a>
+        </div>
+      </div>
+
+      <h2 class="section__title" style="text-align:center">Nuestros valores</h2>
+      <div class="valores-grid">
+        <div class="valor-card">
+          <div class="icon">♻️</div>
+          <h3>Sustentabilidad</h3>
+          <p>Producción responsable con el medio ambiente.</p>
+        </div>
+        <div class="valor-card">
+          <div class="icon">🌈</div>
+          <h3>Inclusión</h3>
+          <p>Ropa unisex para todos los cuerpos y estilos.</p>
+        </div>
+        <div class="valor-card">
+          <div class="icon">🇦🇷</div>
+          <h3>Hecho en Argentina</h3>
+          <p>Apoyamos la industria textil nacional.</p>
+        </div>
+        <div class="valor-card">
+          <div class="icon">💛</div>
+          <h3>Calidad</h3>
+          <p>Telas suaves y costuras que duran lavados y más lavados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom"><p>© 2025 Pipiluz. Todos los derechos reservados.</p></div>
+  </footer>
+  <script src="js/main.js"></script>
+  <!-- Botón flotante WhatsApp -->
+  <a href="https://wa.me/5491165948438?text=Hola!%20Visit%C3%A9%20la%20tienda%20y%20me%20interesa%20realizar%20un%20pedido%20%F0%9F%9B%8D%EF%B8%8F"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <span class="whatsapp-tooltip">¿Consultas? Escribinos</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.535 5.943L.057 23.526a.75.75 0 0 0 .917.917l5.584-1.478A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.943-1.353l-.355-.211-3.664.968.983-3.595-.232-.371A9.699 9.699 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+    </svg>
+  </a>
+</body>
+</html>
