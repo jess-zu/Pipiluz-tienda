@@ -632,7 +632,7 @@ color: var(--texto);
 }
 
 @media (max-width: 900px) {
-  .hamburger { display: block; }
+  .hamburger { display: block !important; }
 }
 
 /* ===== ANIMACIONES ===== */
@@ -759,4 +759,201 @@ color: var(--texto);
     .whatsapp-tooltip {
         display: none;
     }
+
+    /* =============================================
+   PÁGINA DE DETALLE DE PRODUCTO
+   ============================================= */
+.breadcrumb {
+  background: var(--blanco);
+  padding: .8rem 0;
+  border-bottom: 1px solid #F0EBF8;
+  font-size: .9rem;
+  font-weight: 700;
+}
+.breadcrumb a {
+  color: var(--naranja);
+  transition: opacity var(--trans);
+}
+.breadcrumb a:hover { opacity: .7; }
+ 
+.producto-loading {
+  text-align: center;
+  padding: 4rem;
+  color: var(--texto-soft);
+  font-size: 1.1rem;
+}
+ 
+.producto-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+ 
+/* Carrusel grande en detalle */
+.detalle-carousel {
+  position: relative;
+  border-radius: var(--radio);
+  overflow: hidden;
+  background: #F5F0FF;
+  aspect-ratio: 1 / 1;
+}
+.detalle-carousel .carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detalle-carousel .carousel-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+}
+.detalle-thumbnails {
+  display: flex;
+  gap: .6rem;
+  margin-top: .8rem;
+  flex-wrap: wrap;
+}
+.detalle-thumb {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color var(--trans), transform var(--trans);
+  opacity: .7;
+}
+.detalle-thumb.active,
+.detalle-thumb:hover {
+  border-color: var(--naranja);
+  opacity: 1;
+  transform: scale(1.05);
+}
+ 
+/* Info del producto */
+.detalle-info { display: flex; flex-direction: column; gap: 1.2rem; }
+ 
+.detalle-categoria {
+  display: inline-block;
+  background: var(--amarillo);
+  color: var(--texto);
+  font-size: .8rem;
+  font-weight: 800;
+  padding: .25rem .9rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.detalle-nombre {
+  font-family: 'Baloo 2', cursive;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+.detalle-precio {
+  font-family: 'Baloo 2', cursive;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--naranja);
+}
+.detalle-descripcion {
+  color: var(--texto-soft);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+ 
+/* Selector de talle */
+.detalle-label {
+  font-weight: 800;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  display: block;
+}
+.talles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.talle-btn {
+  padding: .45rem 1rem;
+  border-radius: 10px;
+  border: 2px solid #E0D8F0;
+  background: var(--blanco);
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: .85rem;
+  cursor: pointer;
+  transition: all var(--trans);
+  text-align: center;
+}
+.talle-btn span {
+  display: block;
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--texto-soft);
+}
+.talle-btn:hover { border-color: var(--naranja); color: var(--naranja); }
+.talle-btn.active {
+  border-color: var(--naranja);
+  background: var(--naranja);
+  color: var(--blanco);
+}
+.talle-btn.active span { color: rgba(255,255,255,.8); }
+ 
+/* Acciones */
+.detalle-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+.btn-wssp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: .9rem 1.5rem;
+  border-radius: 50px;
+  background: #25D366;
+  color: var(--blanco);
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background var(--trans), transform var(--trans);
+}
+.btn-wssp:hover { background: #1ebe5d; transform: translateY(-2px); }
+.btn-carrito-detalle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  padding: .9rem 1.5rem;
+  border-radius: 50px;
+  background: var(--naranja);
+  color: var(--blanco);
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background var(--trans), transform var(--trans);
+}
+.btn-carrito-detalle:hover { background: #e86420; transform: translateY(-2px); }
+ 
+.detalle-aviso {
+  font-size: .85rem;
+  color: var(--texto-soft);
+  text-align: center;
+  padding: .6rem;
+  background: #FFF9F0;
+  border-radius: 10px;
+  border: 1px solid #FFE4BC;
+}
+ 
+@media (max-width: 768px) {
+  .producto-detalle { grid-template-columns: 1fr; gap: 1.5rem; }
+  .detalle-thumbnails { justify-content: center; }
+}
 }
