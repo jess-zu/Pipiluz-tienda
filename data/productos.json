@@ -1,0 +1,294 @@
+{
+  "marca": "Pipiluz",
+  "coleccion": "2026",
+  "colores_disponibles": ["Negro","Blanco","Blanca","Negra","Verde","Celeste","Rosa","Beige","Gris","Lila","Bordo"],
+  "productos": [
+    {
+      "id": 1,
+      "categoria": "buzos",
+      "nombre": "Buzo All Good Days",
+      "precio": 20000,
+      "imagenes": [
+        "img/buzos-allgoodvibes-colores.webp",
+        "img/allgooddays-skate.webp",
+        "img/buzo-allgooddays.webp"
+      ],
+      "colores": ["Negro","Celeste","Beige","Gris"],
+      "estampas": ["All Good Days"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 2,
+      "categoria": "buzos",
+      "nombre": "Buzo Vans",
+      "precio": 20000,
+      "imagenes": [
+        "img/buzosvans.webp",
+        "img/vans-beige.webp"
+      ],
+      "colores": ["Negro","Celeste","Beige","Gris"],
+      "estampas": ["Vans"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 3,
+      "categoria": "remeras",
+      "nombre": "Remera Good Vibes",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-goodvibes-blanca.webp",
+        "img/reme-goodvibes-unisx.webp"
+      ],
+      "colores": ["Blanca","Negra","Verde","Beige","Bordo"],
+      "estampas": ["Good Vibes"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 4,
+      "categoria": "remeras",
+      "nombre": "Remera Peace",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-peace-unisex.webp",
+        "img/reme-peace-blanca.webp"
+      ],
+      "colores": ["Blanca","Negra","Verde","Beige","Bordo"],
+      "estampas": ["Peace"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 5,
+      "categoria": "remeras",
+      "nombre": "Remera Vans",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-vans-colores.webp",
+        "img/reme-marcas.webp"
+      ],
+      "colores": ["Blanca","Negra","Verde","Bordo","Beige"],
+      "estampas": ["Vans Off The Wall"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 6,
+      "categoria": "remeras",
+      "nombre": "Remera Mickey",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-mickey.webp"
+      ],
+      "colores": ["Blanca","Negra","Verde"],
+      "estampas": ["Mickey"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 7,
+      "categoria": "remeras",
+      "nombre": "Remera Santa Cruz",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-santacruz.webp"
+      ],
+      "colores": ["Blanca","Negra"],
+      "estampas": ["Santa Cruz"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 8,
+      "categoria": "remeras",
+      "nombre": "Remera Smile",
+      "precio": 15000,
+      "imagenes": [
+        "img/reme-smile.webp"
+      ],
+      "colores": ["Blanca","Negra","Beige"],
+      "estampas": ["Smile"],
+      "talles": [
+        {"talle": "T1", "detalle": "10 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 9,
+      "categoria": "bodys",
+      "nombre": "Body Vans",
+      "precio": 13500,
+      "imagenes": [
+        "img/bodys-combos.webp",
+        "img/body-vansa-ros.webp"
+      ],
+      "colores": ["Bordo","Blanco","Negro","Beige"],
+      "estampas": ["Vans"],
+      "talles": [
+        {"talle": "T1", "detalle": "2 a 5 meses"},
+        {"talle": "T2", "detalle": "6 a 9 meses"},
+        {"talle": "T3", "detalle": "10 a 18 meses"},
+        {"talle": "T4", "detalle": "18 a 24 meses"},
+        {"talle": "T5", "detalle": "24 a 36 meses"}
+      ]
+    },
+    {
+      "id": 10,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Vans",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-vans-colores.webp",
+        "img/conjunto-buzo-vans-negro.webp",
+        "img/vans-conjunto-skate.webp",
+        "img/vans-celeste-.webp"
+      ],
+      "colores": ["Negro","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Vans"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 11,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Puma",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-puma-verde.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Puma"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 12,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Disney",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-mickey.webp",
+        "img/conj-disney.webp",
+        "img/conj-daisy.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Mickey","Disney","Daisy"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 13,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Santa Cruz",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-santa-cruz.webp",
+        "img/conjunto-santacruz.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Santa Cruz"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 14,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Nike",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-nike-gris.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Nike"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 15,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto All Good Days",
+      "precio": 45000,
+      "imagenes": [
+        "img/allgooddays-skate.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["All Good Days"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    },
+    {
+      "id": 16,
+      "categoria": "conjuntos",
+      "nombre": "Conjunto Smile",
+      "precio": 45000,
+      "imagenes": [
+        "img/conjunto-smile.webp",
+        "img/conjunto-smile-.webp"
+      ],
+      "colores": ["Negro","Verde","Lila","Celeste","Beige","Gris"],
+      "estampas": ["Smile"],
+      "talles": [
+        {"talle": "T1", "detalle": "12 a 18 meses"},
+        {"talle": "T2", "detalle": "2 a 3 años"},
+        {"talle": "T3", "detalle": "3 a 4 años"},
+        {"talle": "T4", "detalle": "4 a 5 años"}
+      ]
+    }
+  ]
+}

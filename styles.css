@@ -632,7 +632,7 @@ color: var(--texto);
 }
 
 @media (max-width: 900px) {
-  .hamburger { display: block; }
+  .hamburger { display: block !important; }
 }
 
 /* ===== ANIMACIONES ===== */

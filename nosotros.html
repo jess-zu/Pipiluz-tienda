@@ -4,105 +4,450 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nosotros – Pipiluz</title>
-  <link rel="stylesheet" href="css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
-    .about-hero { background:linear-gradient(135deg,#C8E8FF,#CCFADA); padding:4rem 0; text-align:center; }
-    .about-hero h1 { font-family:'Baloo 2',cursive; font-size:2.8rem; font-weight:800; }
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; margin-bottom:4rem; }
-    .about-visual { font-size:8rem; text-align:center; }
-    .about-text h2 { font-family:'Baloo 2',cursive; font-size:2rem; font-weight:800; margin-bottom:1rem; }
-    .about-text p  { color:var(--texto-soft); line-height:1.8; margin-bottom:1rem; }
-    .valores-grid  { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1.5rem; }
-    .valor-card    { background:var(--blanco); border-radius:var(--radio); padding:1.8rem 1.5rem; text-align:center; box-shadow:var(--sombra); }
-    .valor-card .icon { font-size:2.5rem; margin-bottom:.7rem; }
-    .valor-card h3 { font-family:'Baloo 2',cursive; font-weight:800; margin-bottom:.4rem; }
-    .valor-card p  { font-size:.9rem; color:var(--texto-soft); }
-    @media(max-width:700px){ .about-grid{grid-template-columns:1fr;} }
+    body { padding-right: 0 !important; }
+
+    /* ===== NAVBAR ===== */
+    .nos-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: rgba(253,246,238,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(44,34,64,.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nos-nav__logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nos-nav__links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    .nos-nav__links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--soft);
+      text-decoration: none;
+      transition: color var(--trans);
+      padding-bottom: .3rem;
+      border-bottom: 1px solid transparent;
+    }
+    .nos-nav__links a:hover,
+    .nos-nav__links a.active {
+      color: var(--texto);
+      border-bottom-color: var(--blush);
+    }
+    .nos-nav__cart {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--soft);
+      text-decoration: none;
+      transition: color var(--trans);
+    }
+    .nos-nav__cart:hover { color: var(--texto); }
+    .nos-nav__cart svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .nos-nav__cart .cart-badge { background: var(--blush); color: var(--texto); font-size: .6rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+    /* ===== HERO ===== */
+    .nos-hero {
+      position: relative;
+      height: 60vh;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: var(--cream);
+    }
+    .nos-hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('img/pipiluz_hero_collage.webp');
+      background-size: cover;
+      background-position: center;
+      opacity: .18;
+    }
+    .nos-hero__shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .nos-shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: .2;
+      animation: floatNos 6s ease-in-out infinite;
+    }
+    .nos-shape--1 { width: 350px; height: 350px; background: var(--blush); top: -80px; left: -60px; animation-delay: 0s; }
+    .nos-shape--2 { width: 250px; height: 250px; background: var(--mint); bottom: -60px; right: 10%; animation-delay: 2s; }
+    .nos-shape--3 { width: 180px; height: 180px; background: var(--lemon); top: 30%; left: 45%; animation-delay: 4s; }
+    @keyframes floatNos {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-16px) scale(1.04); }
+    }
+    .nos-hero__content {
+      position: relative;
+      z-index: 5;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeUpNos .8s ease both;
+    }
+    .nos-hero__eyebrow {
+      font-size: .75rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: .8rem;
+    }
+    .nos-hero__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      line-height: .95;
+      color: var(--texto);
+      letter-spacing: -.02em;
+    }
+    .nos-hero__title em {
+      font-style: italic;
+      color: var(--blush);
+      -webkit-text-stroke: 1px var(--texto);
+    }
+    .nos-hero__sub {
+      font-size: 1rem;
+      color: var(--soft);
+      margin-top: 1.2rem;
+      letter-spacing: .04em;
+    }
+    @keyframes fadeUpNos {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECCIÓN QUIÉNES SOMOS ===== */
+    .nos-quienes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: 500px;
+    }
+    .nos-quienes__img {
+      position: relative;
+      overflow: hidden;
+      background: var(--blush);
+    }
+    .nos-quienes__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .nos-quienes__img:hover img { transform: scale(1.04); }
+    .nos-quienes__img__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, var(--cream));
+    }
+    .nos-quienes__texto {
+      padding: 5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: var(--cream);
+    }
+    .nos-quienes__eyebrow {
+      font-size: .72rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: .8rem;
+    }
+    .nos-quienes__titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .nos-quienes__titulo em { font-style: italic; color: var(--blush); }
+    .nos-quienes__texto p {
+      font-size: .95rem;
+      color: var(--soft);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+    .nos-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      margin-top: 1.5rem;
+      padding: .85rem 2rem;
+      background: var(--texto);
+      color: var(--cream);
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .nos-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(44,34,64,.2); color: var(--cream); }
+    .nos-cta svg { width: 16px; height: 16px; stroke: currentColor; fill: none; transition: transform var(--trans); }
+    .nos-cta:hover svg { transform: translateX(4px); }
+
+    /* ===== VALORES ===== */
+    .nos-valores {
+      padding: 6rem 3rem;
+      background: rgba(44,34,64,.03);
+    }
+    .nos-valores__header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .nos-valores__eyebrow {
+      font-size: .72rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--soft);
+      margin-bottom: .5rem;
+    }
+    .nos-valores__titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+    }
+    .nos-valores__titulo em { font-style: italic; color: var(--blush); }
+    .nos-valores__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .valor-card {
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      border: 1px solid rgba(44,34,64,.07);
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .valor-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(44,34,64,.1);
+    }
+    .valor-card__icono { font-size: 2.5rem; margin-bottom: 1rem; }
+    .valor-card__titulo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: .5rem;
+    }
+    .valor-card__desc { font-size: .85rem; color: var(--soft); line-height: 1.6; }
+
+    /* ===== FRASE ===== */
+    .nos-frase {
+      padding: 6rem 3rem;
+      text-align: center;
+      background: var(--texto);
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .nos-frase::before {
+      content: '';
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: var(--blush);
+      opacity: .06;
+      right: -100px; top: -200px;
+    }
+    .nos-frase__cita {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      font-style: italic;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.3;
+      position: relative;
+      z-index: 1;
+    }
+    .nos-frase__cita em { color: var(--blush); font-style: normal; }
+    .nos-frase__autor {
+      font-size: .8rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .5;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== FOOTER ===== */
+    @media (max-width: 900px) {
+      .nos-nav { padding: 1rem 1.5rem; }
+      .nos-nav__links { display: none; }
+      .nos-quienes { grid-template-columns: 1fr; }
+      .nos-quienes__img { height: 300px; }
+      .nos-quienes__img__overlay { background: linear-gradient(to top, var(--cream) 0%, transparent 60%); }
+      .nos-quienes__texto { padding: 3rem 1.5rem; }
+      .nos-valores { padding: 4rem 1.5rem; }
+      .nos-frase { padding: 4rem 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header__inner container">
-      <a href="index.html" class="logo"><span class="logo__icon">🌟</span><span class="logo__text">pipiluz</span></a>
-      <nav class="nav" id="nav">
-        <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Inicio</a></li>
-          <li><a href="tienda.html" class="nav__link">Tienda</a></li>
-          <li><a href="nosotros.html" class="nav__link active">Nosotros</a></li>
-          <li><a href="contacto.html" class="nav__link">Contacto</a></li>
-        </ul>
-      </nav>
-      <div class="header__actions">
-        <a href="carrito.html" class="btn-icon">🛒 <span class="cart-badge" id="cartBadge">0</span></a>
-        <button class="hamburger" id="hamburger">☰</button>
-      </div>
-    </div>
-  </header>
 
-  <div class="about-hero">
-    <div class="container">
-      <h1>Nuestra historia</h1>
-      <p style="margin-top:.6rem;color:var(--texto-soft);font-size:1.05rem;">Ropa hecha con amor para los más chiquitos</p>
+  <!-- NAVBAR -->
+  <nav class="nos-nav">
+    <a href="index.html" class="nos-nav__logo">
+      <span class="logo__pipi">Pipi</span><em class="logo__luz">luz</em>
+    </a>
+    <ul class="nos-nav__links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html" class="active">Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="index.html#productos" class="nos-nav__cart">
+      <svg viewBox="0 0 24 24">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      Tienda
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="nos-hero">
+    <div class="nos-hero__bg"></div>
+    <div class="nos-hero__shapes">
+      <div class="nos-shape nos-shape--1"></div>
+      <div class="nos-shape nos-shape--2"></div>
+      <div class="nos-shape nos-shape--3"></div>
+    </div>
+    <div class="nos-hero__content">
+      <p class="nos-hero__eyebrow">Conocenos</p>
+      <h1 class="nos-hero__title">Nuestra<br><em>historia</em></h1>
+      <p class="nos-hero__sub">Ropa hecha con amor para los más chiquitos</p>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <div class="nos-quienes">
+    <div class="nos-quienes__img">
+      <img src="img/pipiluz_hero_collage.webp" alt="Pipiluz ropa infantil" loading="lazy">
+      <div class="nos-quienes__img__overlay"></div>
+    </div>
+    <div class="nos-quienes__texto">
+      <p class="nos-quienes__eyebrow">Quiénes somos</p>
+      <h2 class="nos-quienes__titulo">Somos <em>Pipiluz</em></h2>
+      <p>Nacimos con una idea simple: crear ropa infantil que sea tan cómoda como divertida. Creemos que los chicos merecen prendas que los acompañen en cada aventura, sin límites de género ni estilo.</p>
+      <p>Todas nuestras prendas están pensadas para el movimiento, la libertad y la alegría. Trabajamos con talleres locales y materiales de primera calidad, porque cada detalle importa.</p>
+      <p>Trabajamos por encargue, con amor y dedicación en cada pedido.</p>
+      <a href="index.html#productos" class="nos-cta">
+        Ver colección
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
 
-  <section class="section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual">🧸👶🎨</div>
-        <div class="about-text">
-          <h2>¿Quiénes somos?</h2>
-          <p>Pipiluz nació en 2020 en Buenos Aires, con una idea simple: hacer ropa infantil que sea tan cómoda como divertida. Creemos que los chicos merecen prendas que los acompañen en cada aventura, sin límites de género ni estilo.</p>
-          <p>Todas nuestras prendas están diseñadas pensando en el movimiento, la libertad y la alegría. Trabajamos con talleres locales y materiales de primera calidad.</p>
-          <a href="tienda.html" class="btn btn--primary">Conocé la colección</a>
-        </div>
+  <!-- VALORES -->
+  <section class="nos-valores">
+    <div class="nos-valores__header">
+      <p class="nos-valores__eyebrow">Lo que nos mueve</p>
+      <h2 class="nos-valores__titulo">Nuestros <em>valores</em></h2>
+    </div>
+    <div class="nos-valores__grid">
+      <div class="valor-card">
+        <div class="valor-card__icono">♻️</div>
+        <h3 class="valor-card__titulo">Sustentabilidad</h3>
+        <p class="valor-card__desc">Producción responsable con el medio ambiente y las personas.</p>
       </div>
-
-      <h2 class="section__title" style="text-align:center">Nuestros valores</h2>
-      <div class="valores-grid">
-        <div class="valor-card">
-          <div class="icon">♻️</div>
-          <h3>Sustentabilidad</h3>
-          <p>Producción responsable con el medio ambiente.</p>
-        </div>
-        <div class="valor-card">
-          <div class="icon">🌈</div>
-          <h3>Inclusión</h3>
-          <p>Ropa unisex para todos los cuerpos y estilos.</p>
-        </div>
-        <div class="valor-card">
-          <div class="icon">🇦🇷</div>
-          <h3>Hecho en Argentina</h3>
-          <p>Apoyamos la industria textil nacional.</p>
-        </div>
-        <div class="valor-card">
-          <div class="icon">💛</div>
-          <h3>Calidad</h3>
-          <p>Telas suaves y costuras que duran lavados y más lavados.</p>
-        </div>
+      <div class="valor-card">
+        <div class="valor-card__icono">🌈</div>
+        <h3 class="valor-card__titulo">Inclusión</h3>
+        <p class="valor-card__desc">Ropa unisex para todos los cuerpos, géneros y estilos.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-card__icono">🇦🇷</div>
+        <h3 class="valor-card__titulo">Hecho en Argentina</h3>
+        <p class="valor-card__desc">Apoyamos la industria textil nacional con cada pedido.</p>
+      </div>
+      <div class="valor-card">
+        <div class="valor-card__icono">💛</div>
+        <h3 class="valor-card__titulo">Calidad</h3>
+        <p class="valor-card__desc">Telas suaves y costuras que aguantan lavados y más lavados.</p>
       </div>
     </div>
   </section>
 
+  <!-- FRASE -->
+  <section class="nos-frase">
+    <p class="nos-frase__cita">"Cada prenda que hacemos lleva el cariño de quienes la <em>imaginaron</em> para tu hijo"</p>
+    <p class="nos-frase__autor">— El equipo Pipiluz</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-     <div class="footer__copy">
-        <p>© 2026 Pipiluz. Todos los derechos reservados.</p>
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo-text">
+          <span class="logo__pipi">Pipi</span><em class="logo__luz">luz</em>
+        </a>
+        <p>Ropa infantil unisex con amor desde Buenos Aires.</p>
       </div>
+      <div class="footer__col">
+        <h4>Tienda</h4>
+        <ul><li><a href="index.html#productos">Todos los productos</a></li></ul>
+      </div>
+      <div class="footer__col">
+        <h4>Info</h4>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Política de cambios</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy">
+      <p>© 2026 Pipiluz. Todos los derechos reservados.</p>
+    </div>
   </footer>
-  <script src="js/main.js"></script>
-  <!-- Botón flotante WhatsApp -->
+
+  <!-- WhatsApp -->
   <a href="https://wa.me/5491165948438?text=Hola!%20Visit%C3%A9%20la%20tienda%20y%20me%20interesa%20realizar%20un%20pedido%20%F0%9F%9B%8D%EF%B8%8F"
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener noreferrer"
-     aria-label="Contactar por WhatsApp">
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
     <span class="whatsapp-tooltip">¿Consultas? Escribinos</span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.535 5.943L.057 23.526a.75.75 0 0 0 .917.917l5.584-1.478A11.944 11.944 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.694 9.694 0 0 1-4.943-1.353l-.355-.211-3.664.968.983-3.595-.232-.371A9.699 9.699 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
     </svg>
   </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
