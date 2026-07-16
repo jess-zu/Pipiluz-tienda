@@ -313,7 +313,7 @@
     // =============================================
    let PRODUCTOS = [];
 
-fetch("data/productos.json")
+fetch ("data/productos.json")
   .then(response => response.json())
   .then(data => {
     PRODUCTOS = data.productos;
@@ -409,7 +409,7 @@ fetch("data/productos.json")
           </div>` : "";
 
       modalInfo.innerHTML = `
-        <p class="modal-pip__cat">${producto.cat}</p>
+       <p class="modal-pip__cat">${producto.categoria || producto.cat}</p>
         <p class="modal-pip__nombre">${producto.nombre}</p>
         <p class="modal-pip__precio">${precioTexto}</p>
         ${thumbsHTML}
@@ -423,7 +423,7 @@ fetch("data/productos.json")
         <div class="prod-selector">
           <span class="prod-selector__label">Talle</span>
           <div class="prod-selector__opciones" data-tipo="talle">
-            ${producto.talles.map(t => `<button class="opcion-btn" data-valor="${t.t}" title="${t.d}">${t.t}<span style="display:block;font-size:.6rem;opacity:.6">${t.d}</span></button>`).join("")}
+          ${producto.talles.map(t => `<button class="opcion-btn" data-valor="${t.talle || t.t}" title="${t.detalle || t.d}">${t.talle || t.t}<span style="display:block;font-size:.6rem;opacity:.6">${t.detalle || t.d}</span></button>`).join("")}
           </div>
         </div>
         <div class="prod-acciones">
